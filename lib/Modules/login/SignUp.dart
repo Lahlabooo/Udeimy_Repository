@@ -133,8 +133,8 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Expanded(child: Divider()),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
@@ -176,7 +176,7 @@ class SignUp extends StatelessWidget {
                 onTap: () {
                  Navigator.push(
                      context,
-                     MaterialPageRoute(builder: (context)=>SignIn(),)
+                     MaterialPageRoute(builder: (context)=>const SignIn(),)
                  );
                 },
                 child: const Center(

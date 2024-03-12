@@ -44,6 +44,8 @@ dependencies:
   firebase_core: ^2.24.2
   firebase_auth: ^4.17.5
   carousel_slider: ^4.2.1
+  dash_chat_2: ^0.0.20
+  http:
   #firebase
   #firebase_core: ^2.24.2
   #firebase_auth: ^4.16.0
