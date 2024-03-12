@@ -5,6 +5,8 @@ import 'package:plants_app/Modules/HomePage.dart';
 import 'package:plants_app/Modules/ScannPage.dart';
 import 'package:plants_app/Modules/StartedPage.dart';
 
+import '../Models/Chatbot.dart';
+
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
 
@@ -15,19 +17,28 @@ class HomeLayout extends StatefulWidget {
 class _HomeLayoutState extends State<HomeLayout> {
   int CIndex = 0;
   var screen = [
-    HomeScreen(),
-    ScannScreen(),
-    ChatScreen()
+    const HomeScreen(),
+    const ScannScreen(),
+    //const ChatBot(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
+        items:  [
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined,),label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.qr_code_scanner_outlined),label: ""),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.robot),label: ""),
+          BottomNavigationBarItem(icon:
+          IconButton(onPressed:(){
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context)=>const ChatBot(),)
+            );
+          },
+            icon:Icon(FontAwesomeIcons.robot,) ,),
+              label: ""),
           //BottomNavigationBarItem(icon: Icon(Icons.accessibility_rounded),label: "a"),
 
         ],

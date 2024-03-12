@@ -21,11 +21,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   var items = [
-    Image(image: AssetImage("asset/images/grapes-2715711_1280.jpg")),
-    Image(image: AssetImage("asset/images/istockphoto-124642449-1024x1024.jpg")),
-    Image(image: AssetImage("asset/images/istockphoto-483451251-1024x1024.jpg")),
-    Image(image: AssetImage("asset/images/istockphoto-1399364326-1024x1024.jpg")),
-    Image(image: AssetImage("asset/images/istockphoto-1480690870-1024x1024.jpg")),
+    const Image(image: AssetImage("asset/images/grapes-2715711_1280.jpg")),
+    const Image(image: AssetImage("asset/images/istockphoto-124642449-1024x1024.jpg")),
+    const Image(image: AssetImage("asset/images/istockphoto-483451251-1024x1024.jpg")),
+    const Image(image: AssetImage("asset/images/istockphoto-1399364326-1024x1024.jpg")),
+    const Image(image: AssetImage("asset/images/istockphoto-1480690870-1024x1024.jpg")),
   ];
 
   @override
@@ -64,12 +64,12 @@ class _HomeScreenState extends State<HomeScreen> {
                  ),
                ),
              ),
-             SizedBox(height: 10,),
+             const SizedBox(height: 10,),
              Padding(
                padding: const EdgeInsets.all(8.0),
                child: Column(
                  children: [
-                   Text("Find out what's wrong with your plant and"
+                   const Text("Find out what's wrong with your plant and"
                        " get a plan to bring it back to full health. ",
                      style: TextStyle(
                          fontSize: 19 ,
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      maxLines: 2,
                      overflow: TextOverflow.ellipsis,
                    ),
-                 SizedBox(height: 20,),
+                 const SizedBox(height: 20,),
                  Container(
                    decoration: BoxDecoration(
                      color: Colors.green[400],
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context)=> const ScannScreen(),)
                         );
                        },
-                       child: Text("Scan Now ",style: TextStyle(
+                       child: const Text("Scan Now ",style: TextStyle(
                          fontSize: 20,
                          fontWeight: FontWeight.bold
                        ),
@@ -117,8 +117,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
              ),),
 
-             Padding(
-               padding: const EdgeInsets.all(15.0),
+             const Padding(
+               padding: EdgeInsets.all(15.0),
                child: Text("Category..",style: TextStyle(
                  fontWeight: FontWeight.bold,
                  fontSize: 30,
